@@ -7,13 +7,14 @@
     <title>Blog matteo</title>
   </head>
   <body>
-    <h1>Blog matteo prova</h1>
-    <p>Ciao</p>
+    {% for post in posts %}
 
-    <h1>Blog matteo prova</h1>
-    <p>Ciao</p>
+    <article>
+      <time> published: {{post.published_date}} </time>
+      <h2><a href="">{{post.title}}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </article>
 
-    <h1>Blog matteo prova</h1>
-    <p>Ciao</p>
+    {% endfor %}
   </body>
 </html>
